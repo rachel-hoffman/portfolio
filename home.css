@@ -25,11 +25,11 @@
     }
 
     .headshot{
-        float:right;width:100%;border:3px solid white;border-radius: 20px;max-height: 100%;
+        width:80%;margin-right:10px;border:3px solid white;border-radius: 20px;max-width:233px;max-height:317px;
     }
 
     .titleelement{
-      padding-right:5vw;max-width: 500px;padding-top:20px;
+      padding-right:5vw;width:50%;
     }
 
     .txtTitle{ 
@@ -63,6 +63,10 @@
 
     .bannerImg{
       height:100%;
+    }
+
+    .footerImg{
+      width:20px;
     }
 
     .headtxt{
@@ -171,10 +175,10 @@
 /*div styles*/
     div.title{
         margin:0;
-        padding-top:100px;;
+        padding-top:100px;
         height:400px;
         width:100%;
-        font-size:2rem;
+        font-size:1.5rem;
        /* background-color: rgba(215, 239, 255, 0.377);*/
         overflow:hidden;
         display:flex;
@@ -213,7 +217,6 @@
         height:42vh;
         min-height:400px;
         width:100%;
-        background-color:white;
         color:black;
         padding-top:15px;
         padding-left:30px;padding-right:30px;
@@ -230,17 +233,15 @@
 
 
     div.project{
-        float:left;
-        height:25vw;
-        min-height:175px;
-        width:20vw;
+        height:200px;
+        padding-top:80px;
+        width:60vw;
         min-width:100px;
         color:white;
         background-color: rgba(255, 255, 255, 0.5);
-        padding-right:1vw;
-        padding-left:1vw;
-        padding-bottom:5px;
+        margin-bottom:50px;
         align-items:center;
+        border:4px solid rgba(255, 255, 255, 0.5);
         border-radius:20px;
           
     }
@@ -282,8 +283,7 @@
                 float:bottom;
                 bottom: 0;
                 width: 100%;
-                height: 10vh;
-                
+                height: 150px;
                 background-color:white;
                 text-align: center;
                 color:black;
@@ -476,14 +476,32 @@
         }
       }*/
         
+
+      div.project{
+        float:left;
+        height:25vw;
+        min-height:175px;
+        width:20vw;
+        min-width:100px;
+        color:white;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding-right:1vw;
+        padding-left:1vw;
+        padding-bottom:5px;
+        align-items:center;
+        border-radius:20px;
+          
+      }
+
         div.title{
-            min-height: 700px;;
+             min-height: 700px;
             height:100vh;
             font-size: 3.5rem;
         } 
 
         .txtTitle{
             padding-right:5vw;font-weight:150;padding-top:15vw;max-width: 60vw;
+            padding-top:0;
             
 
         }
@@ -491,7 +509,8 @@
         .titleelement{max-width:50vw;}
         .subtext{
             font-size: 3.5rem;
-            padding-left:7vw
+            padding-left:7vw;
+            
         }
 
         .paragraph{
@@ -502,6 +521,10 @@
 
         .bannerImg{
           height:300px
+        }
+
+        .footerImg{
+            width:40px;
         }
 
         div.banner{
@@ -560,7 +583,6 @@
 
         .headshot{
             float:right;width:100%;border:5px solid white;border-radius: 30px;max-width:438px;max-height:600px;
-            /*This being a percentage squishes the imageeeeeee AH*/
         }
         .heading{
           font-size:4rem;
@@ -630,6 +652,3 @@
         top:3230px;right:40vw;width:250px;height:80px;
              }
 
-
-
-    
