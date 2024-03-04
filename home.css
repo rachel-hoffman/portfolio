@@ -29,7 +29,7 @@
     }
 
     .titleelement{
-      padding-right:5vw;width:50%;
+      padding-right:5vw;max-width: 500px;padding-top:20px;padding-bottom:10px;
     }
 
     .txtTitle{ 
@@ -501,7 +501,6 @@
 
         .txtTitle{
             padding-right:5vw;font-weight:150;padding-top:15vw;max-width: 60vw;
-            padding-top:0;
             
 
         }
