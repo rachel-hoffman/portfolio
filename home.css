@@ -29,7 +29,7 @@
     }
 
     .titleelement{
-      padding-right:5vw;max-width: 500px;
+      padding-right:5vw;max-width: 500px;padding-top:20px;
     }
 
     .txtTitle{ 
@@ -171,8 +171,7 @@
 /*div styles*/
     div.title{
         margin:0;
-        padding-top:4vh;
-        
+        padding-top:100px;;
         height:400px;
         width:100%;
         font-size:2rem;
@@ -478,7 +477,7 @@
       }*/
         
         div.title{
-            min-height: fit-content;
+            min-height: 700px;;
             height:100vh;
             font-size: 3.5rem;
         } 
@@ -560,9 +559,8 @@
         }*/
 
         .headshot{
-            float:right;width:100%;border:5px solid white;border-radius: 30px;
-            min-width: 30vw;
-            max-height:90%;  /*This being a percentage squishes the imageeeeeee AH*/
+            float:right;width:100%;border:5px solid white;border-radius: 30px;max-width:438px;max-height:600px;
+            /*This being a percentage squishes the imageeeeeee AH*/
         }
         .heading{
           font-size:4rem;
