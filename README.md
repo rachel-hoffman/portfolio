@@ -1,7 +1,10 @@
 # portfolio
 Rachel Hoffman's career portfolio
-As of March 2024
 
-Hover animation from w3resource.com
-Hamburger menu from alvarotrigo.com
-Photos copyright free from pexels.com
+helpful resources utilized for this project:
+- font: https://fonts.google.com/specimen/Redressed?
+- hamburger menu code:  https://alvarotrigo.com/blog/hamburger-menu-css-responsive/
+- image fade:  https://webdevetc.com/blog/how-to-add-a-gradient-overlay-to-a-background-image-using-just-css-and-html/
+- copyright free images:  https://www.pexels.com/
+- image enlarge feature:  https://www.geeksforgeeks.org/how-to-make-the-images-bigger-when-clicked/
+
