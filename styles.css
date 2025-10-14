@@ -1,0 +1,750 @@
+/* ADD COLOR THEME
+:root {
+  --primary-color: ;
+  --secondary-color: ; 
+  --text-color-primary: ;
+  --accent-color:;
+  --text-color-secondary: ;
+  --background-color: ;
+} */
+
+/*define font styles*/
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('./fonts/GeistMono-VariableFont_wght.ttf') format('truetype');
+}
+
+
+
+body{
+    background-color: #3d3b52;
+    color:white;
+    font-family: 'Geist Mono', monospace; font-weight: 400;
+}
+  h2{
+    font-size: 5rem;
+    padding-top:8vh;
+    font-family: 'Geist Mono', monospace; font-weight: 400;
+  }
+  p{
+    font-family: 'Geist Mono', monospace; font-weight: 400;
+  }
+  .para{
+    max-width:80vw;
+  }
+  .tooltip{
+    font-family: 'Geist Mono', monospace; font-weight: 400;
+    z-index: 12; /* stays above main */
+    position: absolute; /* instead of absolute */
+  top: 100px; /* adjust as needed */
+  }
+  .subheading{
+    padding-top:20px;
+    font-size: 2rem;
+    margin-top:0px;
+  }
+  #selectAnIcon{
+    margin-bottom: 10vh;
+    font-size: 1.1rem;
+  }
+  
+
+
+.purpleBox{
+    background-image:linear-gradient(to right, #7f36a679, #4b246673);
+    width:fit-content;
+    height:50px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    font-size:14px;
+    color:white;
+    padding: 10px;
+    border-radius:10px;
+    margin-top:12px;
+    font-size:1rem;
+}
+
+.svgLink{
+  height: 30px;
+  width:30px;
+  stroke-width: 2px;
+  stroke-linecap:round;
+}
+a {
+  text-decoration: none;
+}
+
+.videoLink{
+  background-image:linear-gradient(to right, #7f36a679, #4b246673);
+  width:fit-content;
+  height:50px;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  font-size:14px;
+  color:white;
+  stroke:white;
+  fill:white;
+  padding: 10px;
+  border-radius:10px;
+  margin-top:12px;
+  font-size:1rem;
+  margin-bottom: 10vh;
+  font-size: 1.1rem;
+}
+.videoLink:hover{    /*Needs light mode styles*/
+  color:#0e0c3e;
+  stroke:#0e0c3e;
+  fill:#0e0c3e;
+}
+#resumeTitle{padding-top:4vh;}
+#resumeLink{margin: 0;margin-bottom: 5vh;}
+.endButton{
+  width:100%;
+  padding-right:3rem;
+}
+#endButton{
+  justify-self:right;
+}
+
+#main-content{
+  display:grid;
+  gap: .5rem;
+  grid-template-columns: 1fr 1fr;
+  background-image:linear-gradient(to bottom, #00000070, #39393931);
+  overflow: hidden;
+  position: relative; /* required so hat positions inside this container */
+  border-radius: 10px;}
+
+.bottomRight{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:12px;
+  width:100%;
+  align-items: center;
+  row-gap: 30px;
+}
+.topLeft{
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  justify-content: space-between;
+  padding:24px;
+  max-width:700px;
+
+}
+
+
+
+.iconPlaceholder{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  position: relative; /* so tooltip positions relative to this box */
+  display: inline-flex;
+  transition: transform 0.2s ease;
+}
+  .iconPlaceholder .tooltip {
+  background-image:linear-gradient(to right, #612880, #39194fbd);
+  width:fit-content;
+  height:60px;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size:14px;
+  color:white;
+  padding: 10px;
+  border-radius:10px;
+  margin-top:12px;
+  font-size:1rem;
+
+  position: absolute;
+  bottom: -35px; /* below the image */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, bottom 0.25s ease;
+  z-index: 2;
+  }
+
+  .iconPlaceholder:hover .tooltip {
+    opacity: 1;
+    bottom: -80px; /* small rise effect */
+
+  }
+  /* Tilt + slight scale on hover (same as hat) */
+  .iconPlaceholder:hover img {
+    transform: rotate(-10deg) scale(1.05);
+    transition: transform 0.25s ease;
+  }
+
+.icon{
+  height:150px;
+  width:150px;
+  image-rendering: pixelated;
+}
+.arrowIcon{
+  padding-left:8px;
+  width:64px;
+  image-rendering: pixelated;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CHAT GPT's base styles*/
+
+/* Reset & base */
+    * { box-sizing: border-box; }
+    html,body { height: 100%; margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+
+    /* Layout container keeps footer at bottom */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Sticky header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #1b1a24;
+      padding: 1rem;
+      border-bottom: 2px solid black;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    #desktop{
+      width:40px;
+      height:40px;
+    }
+    #desktopTooltip{
+      top:-15px;
+      left:140px;
+      z-index: 3000;
+      height:40px;
+    }
+    .emptyContainer{  /*Replacing the profile pic in the header spacing*/
+      height:40px;
+      width:50px;
+      margin-right: auto;
+    }
+
+    header h1 { margin: 0; font-size: 1.1rem; }
+
+    .windowOptions{
+      position: absolute;
+      align-content: center;
+      width:100%;
+      background-color: #1a192d;
+      border-bottom:2px black solid;
+      padding:10px;
+      display:flex;
+      flex-direction: row;
+      gap:5px;
+      justify-content: end;
+    }
+      .svg{
+        height: 30px;
+        width:30px;
+        stroke:white;
+        color:white;
+        stroke-width: 2px;
+        stroke-linecap:round;
+      }
+      .svg:hover {
+        color: #7f36a679;
+        stroke:#7f36a679;
+        fill:#7f36a679;
+      }
+        #svgMinimize{
+            fill:white;
+            stroke:none;
+          }
+        #svgMinimize:hover {
+            fill:#7f36a679;
+            stroke:none;
+          }
+
+    /* Main content grows to fill available space */
+    main {
+      flex: 1 0 auto;
+      padding: 1rem;
+      margin: 1rem;
+      border: 5px solid #000000;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.27);
+      background-image:linear-gradient(to right, #00000057, #0000003a);
+      overflow: auto;
+    } 
+
+    /* Footer stays after content (not fixed), but you can make it fixed if you prefer */
+    footer {
+      flex-shrink: 0;
+      padding: 0.75rem 1rem;
+      background: #1b1a24;
+      border-top: 2px solid black;
+      text-align: center;
+      font-size: 0.95rem;
+      display:flex;
+      flex-direction:row;
+      align-items: center;
+      justify-content: space-between;
+    }
+      .left{
+        padding-left:32px;
+      }
+      .right{
+        padding-right:32px;
+      }
+
+
+
+.header{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-right:50px;
+  padding-left:50px;
+}
+
+/*Toggle styles*/
+.toggleContainer{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f263b;
+  margin-left:auto;
+  padding:5px;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  gap:5px;
+}
+  .toggleNight{
+    background-color:#0e0c3e;
+    border-radius:6px;
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+  }
+  .toggleDay{
+    border-radius:6px;
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .toggleIcon{
+    height:30px;
+    image-rendering: pixelated;
+  }
+
+.profilePic{
+  height:50px;
+  image-rendering: pixelated;
+}
+
+
+.healthBar{
+  display: flex;
+  justify-content: center;
+  gap:10px;
+
+}
+  .heart{
+    height:40px;
+    image-rendering: pixelated;
+  }
+
+
+
+
+
+
+/*light theme styles*/
+
+body {
+  background-color: #3d3b52;
+  color: white;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.light-mode {
+  background-color: #f8f4de;
+  color: black;
+}
+body.light-mode #main-content {
+  color:#000;
+  background-image:linear-gradient(to right, #e2dbca, hsl(52, 37%, 85%));
+}
+body.light-mode p{
+  color:black;
+}
+body.light-mode .tooltip{
+  color:black;
+  background-image:linear-gradient(to right, #fff7e2, hsl(53, 53%, 81%));
+}
+body.light-mode .purpleBox{
+background-image:linear-gradient(to right, #fff9eace, hsla(53, 53%, 81%, 0.593));
+}
+body.light-mode .header{
+  background-color: #d4cbb3;
+}
+body.light-mode .toggleContainer{
+  background-color: #f8f4de;
+}
+body.light-mode .toggleNight{
+  background-color: transparent;
+  border:none;
+}
+body.light-mode .toggleDay{
+  background-color:#fff291;
+    border-radius:6px;
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+}
+body.light-mode .footer{
+  background-color:#d4cbb3;
+}
+body.light-mode .windowOptions {
+      background-color: #d4cbb3;}
+body.light-mode .svg{
+        stroke:black;
+        color:black;
+      }
+body.light-mode .svg:hover {
+        color: #fff291;
+        stroke:#fff291;
+        fill:#fff291;
+      }
+body.light-mode #svgMinimize{
+            fill:black;
+            stroke:none;
+          }
+body.light-mode  #svgMinimize:hover {
+            fill:#fff291;
+            stroke:none;
+          }
+
+/*dark/light theme toggle*/
+/* Optional: add glow effect when active */
+.toggleDay.active, .toggleNight.active {
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.3);
+}
+.toggleContainer {
+  position: relative;
+  height: 50px;
+  width:91px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleNight, .toggleDay {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease;
+}
+
+.toggleDay {
+  left: 45px;
+}
+
+.toggleIcon {
+  height: 30px;
+  image-rendering: pixelated;
+}
+
+/* Active toggle state */
+.toggleContainer.active .toggleNight {
+  left: 45px;
+}
+
+.toggleContainer.active .toggleDay {
+  left: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+/**ChatGPT's hat syles*/
+
+/* --- Halloween Hat Styles --- */
+.halloweenImg {
+  width:120px;
+}
+.halloween-hat {
+  position: absolute; /* instead of absolute */
+  top: 60px; /* adjust as needed */
+  left: 120px;
+  z-index: 10; /* stays above main */
+}
+
+.halloween-hat img {
+  image-rendering: pixelated;
+  transition: transform 0.2s ease;
+}
+
+.halloween-hat:hover img {
+  transform: rotate(-10deg) scale(1.05);
+}
+
+/* Tooltip bubble */
+.halloween-hat .tooltip {
+    background-image:linear-gradient(to right, #7f36a6aa, #4b24669c);
+    width:fit-content;
+    height:50px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    font-size:14px;
+    color:white;
+    padding: 10px;
+    border-radius:10px;
+    margin-top:12px;
+    font-size:1rem;
+
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, top 0.25s ease;
+    z-index: 20;
+}
+
+.halloween-hat:hover .tooltip {
+  opacity: 1;
+  top: 115px;
+}
+#halloween{
+  position: fixed;
+  top: 60px;
+  transition: opacity 0.1s ease;
+
+}
+
+
+
+
+
+/*image placeholder*/
+.imageTitle{
+  row-gap:2vh;
+  column-gap: 1vh;
+  height:70%;
+  width:100%;
+  padding:32px;
+  margin-top:60px;
+  align-items: center;
+  
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+#galleryImg{
+  border-radius: 20px;
+  /*box-shadow: 2px 4px 6px #000;*/
+}
+.imgPlaceholder{
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  overflow: hidden;
+}
+#imgOne{
+  height:auto;
+}
+#imgTwo{
+  width:45%;
+  height:45%
+}
+
+
+
+imagesDiv{
+  width:100%;
+  
+}
+h3{
+  text-align: center;
+  font-family: 'Geist Mono', monospace; font-weight: 400;
+  font-size: 2rem;
+}
+
+
+.content {
+  flex: 1 0 auto;
+  padding: 1rem;
+  margin: 1rem;
+  border: 5px solid #000000;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.27);
+  background-image:linear-gradient(to right, #00000057, #0000003a);
+  overflow: hidden;
+  background-image:linear-gradient(to bottom, #00000070, #39393931);
+  overflow: hidden;
+  position: relative; /* required so hat positions inside this container */
+  height:fit-content;
+}
+.title-h3{
+  width:100%;
+  padding:32px;
+  margin-top: 24px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.imageGallery{
+  width:100%;
+  min-height: fit-content;
+  display:grid;
+  grid-template-columns: 4fr 3fr;
+  gap: 12px;
+  overflow: hidden;
+}
+.leftColumn{
+  min-height: fit-content;
+  padding:24px;
+  padding-right: 0;
+  display:flex;
+  flex-direction: column;
+  gap:12px;
+}
+
+.rightColumn{
+  min-height: fit-content;
+  padding:24px;
+  padding-left: 0;
+  display:flex;
+  flex-direction: column;
+  gap:12px;
+}
+#img1{
+  max-height:auto;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+  border:#000 2px solid;
+}
+
+
+/*img hover styles*/
+/* Hover darken + text reveal */
+.imgWrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.imgWrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.imgWrapper .hoverText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  text-align: center;
+}
+
+/* On hover */
+.imgWrapper:hover img {
+  filter: brightness(50%);
+  transform: scale(1.03);
+}
+
+.imgWrapper:hover .hoverText {
+  opacity: 1;
+}
+
+
+
+#resume{
+  border-radius: 20px;
+  /*box-shadow: 2px 4px 6px #000;*/
+  width:100px;
+  height:auto;
+  image-rendering: pixelated;
+  margin:0;
+  padding:0;
+}
+
+.topLeft2{
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  justify-content:center;
+  padding: 24px;
+  max-width:1200px;
+}
