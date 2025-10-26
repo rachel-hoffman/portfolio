@@ -20,13 +20,29 @@
   height:120px;
   width:120px;
 }
-
+.personalDiv {
+    flex: 1 1 100%;  /* stack vertically */
+  }
+  .aboutMe {
+    font-size: 1.1rem; /* slightly smaller for mobile */
+  }
+#calcGallery{
+  gap:12px;
+}
+#calcLeftGallery{
+  gap:12px;
+  padding-left:50px;
+}
+#calcRightGallery{
+  gap:12px;
+  padding-right:50px;
+}
 }
 
 @media (max-width: 1024px) {
   #main-content{
     grid-template-columns: 1fr;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
   .bottomRight{
   row-gap:50px;
@@ -40,12 +56,35 @@
   height:100px;
   width:100px;
 }
+#calcGallery{
+  gap:12px;
+}
+#calcLeftGallery{
+  gap:12px;
+  padding-left:32px;
+}
+#calcRightGallery{
+  gap:12px;
+  padding-right:32px;
+}
+#resumeBody{
+  padding-left:50px;
+  padding-right:50px;
+}
+.skillsList {
+  columns: 2;
+}
+.portfolioImg{
+  width:80vw;
+  padding:24px;
+  padding-top: 0px;
+}
 }
 
 @media (max-width: 820px) {
   #main-content{
     grid-template-columns: 1fr;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
   .bottomRight{
   row-gap:50px;
@@ -53,12 +92,28 @@
   .halloween-hat {
   left: 80px;
 }
+#calcGallery{
+  gap:0px;
+}
+#calcLeftGallery{
+  gap:12px;
+  padding-left:0px;
+  padding-bottom: 0;
+}
+#calcRightGallery{
+  gap:12px;
+  padding-right:0px;
+}
+.portfolioImg{
+  width:70vw;
+  padding:24px;
+}
 }
 
 @media (max-width: 600px) {
   #main-content{
     grid-template-columns: 1fr;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     padding:20px;
   }
   h2{
@@ -119,12 +174,25 @@
 
   grid-template-columns: 1fr;
 }
-
+#calcGallery{
+  gap:24px;
+}
+#resumeBody{
+  padding-left:24px;
+  padding-right:24px;
+}
+.skillsList {
+  columns: 1;
+}
+.portfolioImg{
+  width:80vw;
+}
 }
 
 @media (max-width: 480px) {
   #main-content{
     grid-template-columns: 1fr;
+    padding-bottom: 200px;
     padding:20px;
   }
   .bottomRight{
@@ -171,7 +239,9 @@ h2{
     height:40px;
     image-rendering: pixelated;
   }
-
+.portfolioImg{
+  width:100vw;
+}
 }
 
 

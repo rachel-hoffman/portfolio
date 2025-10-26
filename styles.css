@@ -33,6 +33,7 @@ body{
   }
   .para{
     max-width:80vw;
+    text-align: left;
   }
   .tooltip{
     font-family: 'Geist Mono', monospace; font-weight: 400;
@@ -129,6 +130,7 @@ a {
   align-items: center;
   row-gap: 30px;
 }
+
 .topLeft{
   display:flex;
   flex-direction: column;
@@ -411,6 +413,10 @@ body.light-mode #main-content {
   color:#000;
   background-image:linear-gradient(to right, #e2dbca, hsl(52, 37%, 85%));
 }
+body.light-mode .content{
+  color:#000;
+  background-image:linear-gradient(to right, #e2dbca, hsl(52, 37%, 85%));
+}
 body.light-mode p{
   color:black;
 }
@@ -420,6 +426,15 @@ body.light-mode .tooltip{
 }
 body.light-mode .purpleBox{
 background-image:linear-gradient(to right, #fff9eace, hsla(53, 53%, 81%, 0.593));
+}
+body.light-mode .videoLink{
+  background-image:linear-gradient(to right, #fff9eace, hsla(53, 53%, 81%, 0.593));
+  color:black;
+  stroke:black;
+  fill:black;
+}
+body.light-mode .videoLink:hover{
+  text-decoration: solid black underline;
 }
 body.light-mode .header{
   background-color: #d4cbb3;
@@ -604,6 +619,11 @@ body.light-mode  #svgMinimize:hover {
   border-radius: 20px;
   /*box-shadow: 2px 4px 6px #000;*/
 }
+#artImg{
+  border-radius: 20px;
+  border: black 2px solid;
+  width:40vw;
+}
 .imgPlaceholder{
   flex-grow: 0;
   flex-shrink: 0;
@@ -629,7 +649,10 @@ h3{
   font-family: 'Geist Mono', monospace; font-weight: 400;
   font-size: 2rem;
 }
-
+h4{
+  font-family: 'Geist Mono', monospace; font-weight: 400;
+  font-size: 1.5rem;
+}
 
 .content {
   flex: 1 0 auto;
@@ -645,13 +668,19 @@ h3{
   position: relative; /* required so hat positions inside this container */
   height:fit-content;
 }
+
 .title-h3{
   width:100%;
   padding:32px;
   margin-top: 24px;
   display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+#resumeBody{
+  text-align: left;
+  align-items: start;
 }
 .imageGallery{
   width:100%;
@@ -660,6 +689,17 @@ h3{
   grid-template-columns: 4fr 3fr;
   gap: 12px;
   overflow: hidden;
+}
+#calcGallery{
+  gap:24px;
+}
+#calcLeftGallery{
+  gap:24px;
+  padding-left:100px;
+}
+#calcRightGallery{
+  gap:24px;
+  padding-right:100px;
 }
 .leftColumn{
   min-height: fit-content;
@@ -674,6 +714,7 @@ h3{
   min-height: fit-content;
   padding:24px;
   padding-left: 0;
+  padding-right: 0;
   display:flex;
   flex-direction: column;
   gap:12px;
@@ -706,7 +747,7 @@ h3{
 .imgWrapper .hoverText {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   color: white;
   font-weight: 600;
@@ -715,7 +756,8 @@ h3{
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
-  text-align: center;
+  text-align: left;
+  font-family: 'Courier New', monospace;
 }
 
 /* On hover */
@@ -747,4 +789,99 @@ h3{
   justify-content:center;
   padding: 24px;
   max-width:1200px;
+}
+
+
+
+.personalDiv{
+  display:flex;
+  flex-direction: column;
+  padding:24px;
+  margin-bottom: 2rem;
+}
+.hobby{
+  display:grid;
+  grid-template-columns: 1fr 4fr;
+  gap:24px;
+  align-items: center;
+}
+p.aboutMe {
+  font-size: 1rem; /* slightly larger text */
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;   /* allows stacking on small screens */
+  gap: 2rem;         /* space between columns */
+}
+
+.personalDiv {
+  flex: 1 1 45%;     /* base width ~45%, grow/shrink as needed */
+  min-width: 300px;  /* ensures stacking on very small screens */
+}
+
+p.aboutMe {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #eaeaea;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 1rem;
+}
+div.aboutMe{
+  background-color: red;
+  
+
+}
+#extra{
+  min-width:90vw;}
+#paddingAdd{
+    padding:32px;
+    max-width:1000px;
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+}
+#center{
+justify-content: center;
+}
+#aboutMe{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#resumeBody{
+  width:100%;
+  padding-left:100px;
+  padding-right:100px;
+  display:flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+#resumeBody ul {
+  margin: 0.5rem 0 1rem 1.25rem;
+  line-height: 1.5;
+}
+
+#resumeBody li {
+  margin-bottom: 0.25rem;
+}
+
+.skillsList {
+  columns: 3; /* optional for multi-column skill layout */
+  column-gap: 2rem;
+}
+
+
+#contactIcon{
+  width:auto;
+  height:35px;
+  padding-right:12px;
+  image-rendering: pixelated;
+}
+
+
+.portfolioImg{
+  width:40vw;
+  padding-right: 32px;
 }
