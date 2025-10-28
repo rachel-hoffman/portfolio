@@ -10,45 +10,14 @@
 </head>
 <body>
   <div class="page">
-    <header role="banner" class="header">
-
-      <div class="iconPlaceholder" id="desktop">
-        <a href="index.html"><img src="images/portfolio.png" class="profilePic">
-        <span class="tooltip" id="desktopTooltip">Back to desktop</span></a>
-      </div>
-
-      <div class="emptyContainer">
-      </div>
-
-      <div class="healthBar">
-        <img src="images/heart.png" class="heart">
-        <img src="images/heart.png" class="heart">
-        <img src="images/heart.png" class="heart">
-      </div>
-
-      <div class="toggleContainer" id="themeToggle">
-        <div class="toggleNight">
-          <img src="images/moon.png" alt="night theme" class="toggleIcon">
-        </div>
-        <div class="toggleDay">
-          <img src="images/sun.png" alt="day theme" class="toggleIcon">
-        </div>
-      </div>
-      
-    </header>
-
-
- 
-
-
-
+    <div id="header-container"></div>
+    <script src="index.js"></script>
 
     <main role="main" id="main-content">
 
-
       <div class="topLeft">
-        <h2>// Welcome to my Portfolio</h2>
-        <p class="subheading">Coded from scratch. Designed for curiosity.</p>
+        <h2>// Rachel's Desktop</h2>
+        <p class="subheading">A porfolio <em>coded</em> from scratch, <em>designed</em> for curiosity.</p>
         <div class="purpleBox" id="selectAnIcon">
           <p>Select an icon to see what I've been building</p>
           <img src="images/arrow.png" class="arrowIcon">
@@ -62,39 +31,50 @@
           <span class="tooltip">Calculator Project<br>Figma  |  HTML  |  CSS  </span>
         </div>
         <div class="iconPlaceholder">
-          <a href="captions.html"><img src="images/captions.png" class="icon" alt="captions" aria-hidden="true"></a>
-          <span class="tooltip">Caption Generator<br>Gen AI  |  UX Design</span>
-        </div>
-        <div class="iconPlaceholder">
           <a href="portfolio.html"><img src="images/portfolio.png" class="icon" alt="portfolio" aria-hidden="true"></a>
           <span class="tooltip">Portfolio Website<br>HTML  |  CSS  |  JS</span>
         </div>
+        
         <div class="iconPlaceholder">
-          <a href="calendar.html"><img src="images/calendar.png" class="icon" alt="calendar" aria-hidden="true"></a>
-          <span class="tooltip">Calendar App<br>Figma  |  UX Design</span>
+          <!--<a href="placeholder.html">--><img src="images/captions.png" class="icon" alt="captions" aria-hidden="true"><!--</a>-->
+          <span class="tooltip">Caption Generator<br>Coming Soon!</span><!--Gen AI  |  UX Design-->
+        </div>
+        <div class="iconPlaceholder">
+          <!--<a href="placeholder.html">--><img src="images/calendar.png" class="icon" alt="calendar" aria-hidden="true"><!--</a>-->
+          <span class="tooltip">Calendar App<br>Coming Soon!</span><!--Figma  |  UX Design-->
         </div>
         <div class="iconPlaceholder">
           <a href="resume.html"><img src="images/resume.png" class="icon" alt="resume" aria-hidden="true"></a>
-          <span class="tooltip">Resume<br>See my full experience here.</span>
+          <span class="tooltip">Resume<br>Career Data</span>
         </div>
         <div class="iconPlaceholder">
           <a href="contact.html"><img src="images/contact.png" class="icon" alt="contact" aria-hidden="true"></a>
-          <span class="tooltip">Contact Me<br>Let’s connect!</span>
+          <span class="tooltip">Contact Me<br>Let’s Connect!</span>
         </div>
          <div class="iconPlaceholder">
-          <img src="images/bomb.png" class="icon">
-          <span class="tooltip">You're the Bomb!<br>Click to see more.</span>
+          <img src="images/bomb.png" class="icon" id="bomb">
+          <span class="tooltip">What's that<br>hissing noise?</span>
         </div>
         <div class="iconPlaceholder">
          <a href="aboutMe.html"><img src="images/profile.png" class="icon"></a>
-          <span class="tooltip">About Rachel<br>Get to know me.</span>
+          <span class="tooltip">About Rachel<br>View User Profile</span>
         </div>
         <div class="iconPlaceholder">
           <a href="art.html"><img src="images/art.png" class="icon"></a>
-          <span class="tooltip">Artistic Pursuits<br>See my personal art.</span>
+          <span class="tooltip">Artistic Pursuits<br>Personal Art</span>
         </div>
       </div>
 
+      <!-- Explosion Overlay -->
+      <div id="explosion-overlay">
+        <img src="images/explosion.gif" id="explosion-gif">
+      </div>
+
+      <!-- Death Screen -->
+      <div id="death-screen">
+        <h1>You Died</h1>
+        <button id="respawn-btn">Respawn</button>
+      </div>
 
     </main>
     

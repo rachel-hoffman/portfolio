@@ -885,3 +885,83 @@ justify-content: center;
   width:40vw;
   padding-right: 32px;
 }
+
+.videoFinal{
+  max-width:50vw;
+}
+
+.textLink{
+  color:white;
+}
+
+.textLink:hover{
+  color:#0e0c3e;
+  text-decoration: underline solid 2px #0e0c3e;
+}
+
+
+
+/*Bomb and hearts*/
+
+#hud {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+#hearts img {
+  width: 40px;
+}
+
+#bomb {
+  cursor: pointer;
+}
+
+#explosion-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: transparent; /*was black-- replace with gif!*/
+  display: none; /* hidden until bomb is clicked */
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+#explosion-gif{
+  image-rendering: pixelated;
+}
+#explosion-overlay img {
+  width: 60%;
+}
+
+#death-screen {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  display: none; /* hidden until dead */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#respawn-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+.lose-heart {
+  animation: blink 0.3s steps(2, start) 3; /* 3 blinks */
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

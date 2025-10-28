@@ -10,40 +10,12 @@
 </head>
 <body>
   <div class="page">
-    <header role="banner" class="header">
-
-      <div class="iconPlaceholder" id="desktop">
-        <a href="index.html"><img src="images/portfolio.png" class="profilePic">
-        <span class="tooltip" id="desktopTooltip">Back to desktop</span></a>
-      </div>
-
-      <div class="emptyContainer">
-      </div>
-
-      <div class="healthBar">
-        <img src="images/heart.png" class="heart">
-        <img src="images/heart.png" class="heart">
-        <img src="images/heart.png" class="heart">
-      </div>
-
-      <div class="toggleContainer" id="themeToggle">
-        <div class="toggleNight">
-          <img src="images/moon.png" alt="night theme" class="toggleIcon">
-        </div>
-        <div class="toggleDay">
-          <img src="images/sun.png" alt="day theme" class="toggleIcon">
-        </div>
-      </div>
-      
-    </header>
-
- 
- 
+    <div id="header-container"></div>
+    <script src="index.js"></script>
 
 
     <main role="main" id="main-content">
     
-      
       <div class="windowOptions">
         <svg class="svg" id="svgMinimize" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M2.5,12 C2.5,11.1716 3.17157,10.5 4,10.5 L20,10.5 C20.8284,10.5 21.5,11.1716 21.5,12 C21.5,12.8284 20.8284,13.5 20,13.5 L4,13.5 C3.17157,13.5 2.5,12.8284 2.5,12 Z" id="路径"></path>
@@ -69,15 +41,15 @@
         </a>
         
         <p class="para">
+          This project is my way of blending design and development on my own terms. I recently completed a <a href="https://www.freecodecamp.org/certification/rachel-hoffman/responsive-web-design" id="textLink">Responsive Web Design certification</a>, and this became the perfect opportunity to put those skills into practice. I planned, designed, coded, and managaged the process of every part of this project. I used HTML, CSS, and JavaScript for the coding languages, and handled all the hosting, file management, and updates through GitHub.
         </p>
-
         <p class="para">
+          The site started as a way for me to take back creative control of the presentation of my work. I used to host a site on Wix.com, and found myself limitated by this setup. I didn’t want my website to look like a boring template, and I didn't want my work to be tied to subscriptions and fees. I wanted something fully mine. So, I rebuilt everything from scratch and hosted on GitHub with my own custom domain. This let me get to a place of full ownership.
         </p>
-
         <p class="para">
+          My goal was to create a portfolio that doesn't just show my work, but is a piece of my work. I focused on functionality and responsiveness first, then let myself get creative. I designed my own pixel art, playful UI elements, and interactive components. It’s a front-end project, but also a design project that I got to have a lot of fun with.
         </p>
 
-        
       </div>
 
       <div class="imageTitle">
@@ -135,7 +107,7 @@
         <div class="rightColumn" id="calcRightGallery">
           <div class="imgWrapper">
             <img src="images/portfolioProject/designing/icons.jpg" id="img1" alt="">
-            <span class="hoverText">I made all of the pixel art in Procreate. This was so much fun!</span>
+            <span class="hoverText">I made all of the pixel art myself using Procreate.</span>
           </div>
         </div>
       </div>
@@ -152,16 +124,19 @@
       <div class="imageGallery" id="calcGallery">
         <div class="leftColumn" id="calcLeftGallery">
           <div class="imgWrapper">
-            <img src="images/portfolioProject/coding/front-end.png" id="img1" alt="">
-            <span class="hoverText">The final website, made with HTML + CSS, as you see it now.</span>
+            <img src="images/portfolioProject/coding/github.PNG" id="img1" alt="">
+            <span class="hoverText">Hosting my site using GitHub Pages.</span>
           </div>
-          
         </div>
 
         <div class="rightColumn" id="calcRightGallery">
           <div class="imgWrapper">
-            <img src="images/calculator/code/html.PNG" id="img1" alt="">
-            <span class="hoverText"></span>
+            <img src="images/portfolioProject/coding/html.PNG" id="img1" alt="">
+            <span class="hoverText">Setting up my homepage and file structure in HTML.</span>
+          </div>
+          <div class="imgWrapper">
+            <img src="images/portfolioProject/coding/css.PNG" id="img1" alt="">
+            <span class="hoverText">Having fun with CSS, adding light mode and other styles.</span>
           </div>
           
         </div>
@@ -173,16 +148,22 @@
         <h3>Final Product</h3>
       </div>
       <div class="title-h3">
-        <p class="para"></p>
+        <p class="para">This website brought together my foundations in both front-end development and UX design. I will continue to add new features and experiment with new tactics on this site, but I'm beyond happy with where it is today. The foundation is functional and responsive, reflecting both my design style and technical skillset.</p>
+
+        <p class="para">This project is more than just a portfolio. It’s proof to myself that I can design something, code it, deploy it, and maintain it independently. It represents creative freedom, technical growth, and the start of me building things on the web not just as a designer, but as a creator. Stay tuned for more!</p>
       </div>
 
       <div class="imageGallery" id="calcGallery">
         <div class="leftColumn" id="calcLeftGallery">
-            <img src="images/portfolioProject/portfolioDisplay.png" id="img1" alt="">
+            <video controls class="videoFinal" autoplay loop muted>
+              <source src="videos/portfolio.mp4" type="video/mp4" >
+              <source src="videos/portfolio.mp4" type="video/ogg" >
+            Your browser does not support the video tag.
+            </video>
         </div>
 
         <div class="rightColumn" id="calcRightGallery">
-          <img src="images/portfolioProject/brainstorming/v1.png" id="img1" alt="">
+          <img src="images/portfolioProject/coding/front-end.png" id="img1" alt="">
         </div>
       
     </main>
