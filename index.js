@@ -1,17 +1,46 @@
-//header fetch
+// HEADER FETCH + SETUP
 fetch('header.html')
   .then(response => response.text())
   .then(html => {
-    // Insert the header HTML into the placeholder
+    // Insert header HTML into placeholder
     document.getElementById('header-container').innerHTML = html;
 
-    // Now that the header exists, set up hearts & bomb
+    // Setup header elements
+    setupThemeToggle();
     setupHeartsAndBomb();
   })
   .catch(err => console.error('Header failed to load:', err));
 
+
+// =====================
+// THEME TOGGLE
+// =====================
+function setupThemeToggle() {
+  const toggleNight = document.querySelector(".toggleNight");
+  const toggleDay = document.querySelector(".toggleDay");
+  const body = document.body;
+
+  // load saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") body.classList.add("light-mode");
+
+  // add listeners
+  toggleNight.addEventListener("click", () => {
+    body.classList.remove("light-mode");
+    localStorage.setItem("theme", "dark");
+  });
+
+  toggleDay.addEventListener("click", () => {
+    body.classList.add("light-mode");
+    localStorage.setItem("theme", "light");
+  });
+}
+
+
+// =====================
+// HEARTS + BOMB
+// =====================
 function setupHeartsAndBomb() {
-  // --- Hearts and Bomb animations ---
   let lives = parseInt(localStorage.getItem('lives')) || 3;
 
   const hearts = [
@@ -27,6 +56,7 @@ function setupHeartsAndBomb() {
 
   updateHeartsDisplay();
 
+  // BOMB click handler
   bomb.addEventListener('click', () => {
     if (lives <= 0) return;
 
@@ -84,50 +114,15 @@ function setupHeartsAndBomb() {
 }
 
 
-//light mode
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleNight = document.querySelector(".toggleNight");
-  const toggleDay = document.querySelector(".toggleDay");
-  const body = document.body;
-
-  // --- Load saved theme (optional)
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") body.classList.add("light-mode");
-
-  // --- Dark mode
-  toggleNight.addEventListener("click", () => {
-    body.classList.remove("light-mode");
-    localStorage.setItem("theme", "dark");
-  });
-
-  // --- Light mode
-  toggleDay.addEventListener("click", () => {
-    body.classList.add("light-mode");
-    localStorage.setItem("theme", "light");
-  });
-});
-
-
-
-//toggle animation
-//const toggle = document.querySelector('#themeToggle');
-
-//toggle.addEventListener('click', () => {
-//  toggle.classList.toggle('active');
-//});
-
-
-
-
-//Halloween fade as user scrolls
+// =====================
+// HALLOWEEN FADE (works independently)
+// =====================
 document.addEventListener("scroll", () => {
   const hat = document.getElementById("halloween");
-  const maxScroll = 100; // how far before it fully fades (px)
+  if (!hat) return; // avoid errors on pages without the element
+
+  const maxScroll = 100;
   const scrollY = window.scrollY;
-  
-  // Clamp opacity between 1 → 0
   const opacity = Math.max(0, 1 - scrollY / maxScroll);
   hat.style.opacity = opacity;
 });
-
-
