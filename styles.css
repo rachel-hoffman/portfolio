@@ -965,3 +965,8 @@ justify-content: center;
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+
+header.header {
+  position: fixed;
+width:100%}
