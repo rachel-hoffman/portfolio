@@ -915,6 +915,9 @@ justify-content: center;
   color:white;
 }
 
+a{
+  color:purple;
+}
 .textLink:hover{
   color:#0e0c3e;
   text-decoration: underline solid 2px #0e0c3e;
@@ -991,6 +994,7 @@ header.header {
   position: fixed;
 
 width:100%}
+
 
 
 
