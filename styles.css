@@ -709,7 +709,7 @@ h4{
   max-width:60%;
 }
 #calcVideo{
-  max-height:60vh;
+  max-height:80vh;
   width:auto;
   border-radius: 20px;
   border: black 2px solid;
@@ -991,6 +991,7 @@ header.header {
   position: fixed;
 
 width:100%}
+
 
 
 
