@@ -79,7 +79,7 @@
   padding:24px;
   padding-top: 0px;
 }
-    .hoverText{ font-size: 1.5rem;
+    .hoverText{ font-size: 1rem;
 }
 }
 
@@ -192,6 +192,8 @@
 .portfolioImg{
   width:80vw;
 }
+        .hoverText{ font-size: 1rem;
+}
 }
 
 @media (max-width: 480px) {
@@ -247,6 +249,8 @@ h2{
 .portfolioImg{
   width:100vw;
 }
+        .hoverText{ font-size: 1rem;
+}
 }
 
 
@@ -259,4 +263,5 @@ h2{
       header h1 { font-size: 1.25rem; }
 
     }
+
 
