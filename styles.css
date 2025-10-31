@@ -694,9 +694,14 @@ h4{
 #calcGallery{
   gap:24px;
 }
-smallGallery{
+#smallGallery{
   gap:24px;
   max-width:60%;
+}
+#calcVideo{
+  max-height:60vh;
+  border-radius: 20px;
+  border: black 2px solid;
 }
 #calcLeftGallery{
   gap:24px;
@@ -975,3 +980,4 @@ header.header {
   position: fixed;
 
 width:100%}
+
