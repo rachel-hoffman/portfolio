@@ -128,22 +128,43 @@ document.addEventListener("scroll", () => {
 });
 
 
-/* ====== Smart Content Protection ====== */
+// ===== Content Protection Script (Enhanced Image Protection) =====
 
-document.addEventListener("contextmenu", event => {
-  // Allow right-click on links, text inputs, and videos
-  if (
-    event.target.closest("a, input, textarea, video") ||
-    event.target.isContentEditable
-  ) {
-    return;
+// Disable right-click globally, except for allowed elements
+document.addEventListener("contextmenu", function (event) {
+  const tag = event.target.tagName.toLowerCase();
+  const allowedTags = ["input", "textarea", "a", "video"];
+  if (!allowedTags.includes(tag)) {
+    event.preventDefault();
   }
-  event.preventDefault();
 });
 
-// Disable image dragging
+// Disable text selection (optional)
+document.addEventListener("selectstart", e => e.preventDefault());
+
+// Extra image protection
 document.querySelectorAll("img").forEach(img => {
+  // Disable dragging
   img.setAttribute("draggable", "false");
-  img.addEventListener("mousedown", e => e.preventDefault());
+
+  // Disable context menu directly on the image
+  img.addEventListener("contextmenu", e => e.preventDefault());
+
+  // Block drag events
+  img.addEventListener("dragstart", e => e.preventDefault());
+
+  // Optional: prevent saving via mouse events
+  img.addEventListener("mousedown", e => {
+    if (e.button === 2) e.preventDefault(); // Right-click block
+  });
 });
 
+// Optional: prevent users from opening images in new tab via middle click
+document.addEventListener("auxclick", function (e) {
+  if (e.button === 1 && e.target.tagName.toLowerCase() === "img") {
+    e.preventDefault();
+  }
+});
+
+// Console notice
+console.log("Content protected © Rachel Hoffman");
