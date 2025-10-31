@@ -706,7 +706,8 @@ h4{
 }
 #smallGallery{
   gap:24px;
-  max-width:80vw;
+  min-width:fit-content;
+  max-width:100vh;
   height:auto;
   
 }
@@ -1008,6 +1009,7 @@ font-family: 'Geist Mono', monospace; font-weight: 400;
 .skillsList{
   font-family: 'Geist Mono', monospace; font-weight: 400;
 }
+
 
 
 
