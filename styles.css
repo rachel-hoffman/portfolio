@@ -691,6 +691,16 @@ h4{
   gap: 12px;
   overflow: hidden;
 }
+.imageGallerySmall{
+  width:100%;
+  min-height: fit-content;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  overflow: hidden;
+}
 #calcGallery{
   gap:24px;
 }
@@ -980,4 +990,5 @@ header.header {
   position: fixed;
 
 width:100%}
+
 
