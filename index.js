@@ -126,3 +126,24 @@ document.addEventListener("scroll", () => {
   const opacity = Math.max(0, 1 - scrollY / maxScroll);
   hat.style.opacity = opacity;
 });
+
+
+/* ====== Smart Content Protection ====== */
+
+document.addEventListener("contextmenu", event => {
+  // Allow right-click on links, text inputs, and videos
+  if (
+    event.target.closest("a, input, textarea, video") ||
+    event.target.isContentEditable
+  ) {
+    return;
+  }
+  event.preventDefault();
+});
+
+// Disable image dragging
+document.querySelectorAll("img").forEach(img => {
+  img.setAttribute("draggable", "false");
+  img.addEventListener("mousedown", e => e.preventDefault());
+});
+
