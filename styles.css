@@ -712,8 +712,8 @@ h4{
   
 }
 #calcVideo{
-  padding-left:20px;
-  padding-right:20px;
+  max-height:90vh;
+  width:auto;
 }
 #calcLeftGallery{
   gap:24px;
