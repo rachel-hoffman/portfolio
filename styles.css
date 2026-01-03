@@ -1012,6 +1012,140 @@ font-family: 'Geist Mono', monospace; font-weight: 400;
 
 
 
+/*1/2/2026 UPDATES*/
+
+#projectPageIcon{
+  margin-top: 50px;
+}
+
+.projectTitle{
+    padding-top:0;
+  }
+#smallicon{
+  height:35px;
+  width: 35px;
+}
+#endButton{
+  display: flex;
+  gap:10px;
+}
+.link{
+  height:80px;
+}
+
+/*My Process*/
+.processItem{
+  width: 350px;
+  height: 250px;
+  border-radius: 10px;
+  background-image:linear-gradient(to right, #7f36a679, #4b246673);
+  padding:15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.processNumber{
+  margin-top: 0;
+  width: 100%;
+  text-align: left;
+}
+.processIcon{
+  height: 100px;  /*Might need to adjust in media css file-- seems to auto-adjust fine?*/
+  width:100px;
+  stroke:white;
+  color:white;
+  fill:transparent;
+  stroke-width: 2px;
+  stroke-linecap:round;
+}
+.processTitle{
+  font-family: 'Geist Mono', monospace; font-weight: 400;
+  padding:5px;
+  margin:0;
+  font-size:30px;
+}
+.processPara{
+  font-family: 'Geist Mono', monospace; font-weight: 400;
+  text-align: center;
+}
+.processContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap:20px;
+  column-gap: 20px;
+  place-items: center;
+  width: max-content;
+  margin-bottom: 20px;
+}
+#process{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+/*My Work*/
+.myWorkSection{
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+  background-image:linear-gradient(to right, #7f36a66b, #4b24663b);
+  padding:20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.myWorkImg{
+  max-height:500px;
+}
+.myWorkImgContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myWorkTextContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+.myWorkContainer{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  margin-left:25px;
+  margin-right: 25px;
+}
+.bold{
+  font-size: 28px;
+}
+
+
+/**/
+#fillIcon{
+fill:#ffffff;stroke:transparent;
+}
+.finalDesign{
+  max-height: 500px;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#aboutMeImg{
+  max-width: 800px;
+  margin: 0;
+  padding:0;
+}
+.personalDiv{
+  align-items: center;
+  justify-content: center;
+}
 
 
 
