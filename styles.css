@@ -491,7 +491,7 @@ body.light-mode .processIcon{
   stroke:black;
   color:black;
 }
-body.light-mode .fillIcon{
+body.light-mode #fillIcon{
   fill:black;
 }
 
@@ -1162,6 +1162,7 @@ fill:#ffffff;stroke:transparent;
   align-items: center;
   justify-content: center;
 }
+
 
 
 
