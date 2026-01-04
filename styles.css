@@ -481,11 +481,15 @@ body.light-mode  #svgMinimize:hover {
           }
 body.light-mode .processItem{
   color:#000;
-  background-image:linear-gradient(to right, #e2dbca, hsl(52, 37%, 85%));
+  background-image:linear-gradient(to right, #fff9eace, hsla(53, 53%, 81%, 0.593));
 }
 body.light-mode .myWorkSection{
   color:#000;
-  background-image:linear-gradient(to right, #e2dbca, hsl(52, 37%, 85%));
+  background-image:linear-gradient(to right, #fff9eace, hsla(53, 53%, 81%, 0.593));
+}
+body.light-mode .processIcon{
+  stroke:black;
+  color:black;
 }
 
 
@@ -1156,6 +1160,7 @@ fill:#ffffff;stroke:transparent;
   align-items: center;
   justify-content: center;
 }
+
 
 
 
