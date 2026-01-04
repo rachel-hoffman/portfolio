@@ -479,6 +479,16 @@ body.light-mode  #svgMinimize:hover {
             fill:#fff291;
             stroke:none;
           }
+body.light-mode .processItem{
+  color:#000;
+  background-image:linear-gradient(to right, #e2dbca, hsl(52, 37%, 85%));
+}
+body.light-mode .myWorkSection{
+  color:#000;
+  background-image:linear-gradient(to right, #e2dbca, hsl(52, 37%, 85%));
+}
+
+
 
 /*dark/light theme toggle*/
 /* Optional: add glow effect when active */
@@ -1146,6 +1156,7 @@ fill:#ffffff;stroke:transparent;
   align-items: center;
   justify-content: center;
 }
+
 
 
 
