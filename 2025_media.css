@@ -9,6 +9,9 @@
   #main-content{
     padding-bottom: 50px;
   }
+.indexMainGrid{
+  padding-bottom: 50px;
+}
   h2{
     font-size:4rem;
   }
@@ -44,6 +47,10 @@
     grid-template-columns: 1fr;
     padding-bottom: 100px;
   }
+.indexMainGrid{
+  grid-template-columns: 1fr;
+    padding-bottom: 100px
+}
   .bottomRight{
   row-gap:50px;
   }
@@ -88,6 +95,10 @@
     grid-template-columns: 1fr;
     padding-bottom: 100px;
   }
+    .indexMainGrid{
+  grid-template-columns: 1fr;
+    padding-bottom: 100px;
+}
   .bottomRight{
   row-gap:50px;
   }
@@ -121,6 +132,11 @@
     padding-bottom: 200px;
     padding:20px;
   }
+    .indexMainGrid{
+     grid-template-columns: 1fr;
+    padding-bottom: 200px;
+    padding:20px;
+}
   h2{
     font-size: 3rem;
     padding-top:4vh;
@@ -201,6 +217,11 @@
     padding-bottom: 200px;
     padding:20px;
   }
+    .indexMainGrid{
+     grid-template-columns: 1fr;
+    padding-bottom: 200px;
+    padding:20px;
+}
   .bottomRight{
     grid-template-columns: 1fr 1fr;;
     gap:8px;
@@ -257,6 +278,7 @@ h2{
     /* Small responsive niceties */
     @media (min-width: 700px) {
       main { margin: 1.5rem 3rem; padding: 1.25rem; }
+        indexMain{ margin: 1.5rem 3rem; padding: 1.25rem; }
       .content { margin: 1.5rem 3rem; padding: 1.25rem; }
       header h1 { font-size: 1.25rem; }
 
