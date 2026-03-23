@@ -494,6 +494,24 @@ body.light-mode .processIcon{
 body.light-mode #fillIcon{
   fill:black;
 }
+body.light-mode .indexMain{
+    background-image:linear-gradient(to right, #e2dbca, hsl(52, 37%, 85%));
+    color: black;
+  }
+body.light-mode .taskBar{
+    background-color: #d4cbb3;
+    color: black;
+}
+
+body.light-mode .taskBarImg{
+  border: solid black 2px;
+}
+.taskBarIcon{
+  color: black;
+  stroke: black;
+  stroke-width: 2px;
+  
+}
 
 
 /*dark/light theme toggle*/
