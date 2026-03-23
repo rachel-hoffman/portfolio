@@ -1164,6 +1164,78 @@ fill:#ffffff;stroke:transparent;
 }
 
 
+/*3.23.26 Update - Task bar*/
+
+
+/*Needs a light mode version AND media css*/
+.indexMain{
+    padding: 0;
+    background-image:linear-gradient(to bottom, #00000070, #39393931);
+    overflow: hidden;
+    position: relative; /* required so hat positions inside this container */
+    border-radius: 10px;}
+
+/*Remember to make a light mode version of this!!*/
+.taskBar{
+  background-color: #1b1a24;
+  height:50px;width:100%;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  gap:12px;
+  align-items: center;
+}
+
+.taskBarContainer{
+  display:flex;
+  align-items: center;
+  width: 100%;height:50px;
+}
+    #iconsLeft{
+      justify-content: start;
+      gap:10px;
+      padding-left:20px
+    }
+    #iconsCenter{     
+      Display:flex;
+      flex-direction: row;
+      gap:18px;
+      justify-content: center;
+    }
+    #iconsRight{
+      justify-content: end;
+      padding-right: 20px;
+    }
+
+/*Add to media.css
+  Padding should mimic the main{} padding 
+  Padding-bottom should mimic the #main-content padding
+*/
+.indexMainGrid{
+  display:grid;
+  gap: .5rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  padding-bottom: 50px;
+}
+
+/*add resizing for mobile*/
+.taskBarImg{
+  height: 40px;width: 40px;
+  border: solid white 2px;
+  border-radius: 5px;
+  background: white;
+}
+.taskBarIcon{
+  height:20px;
+  width:auto;
+  color: white;
+  stroke: white;
+  stroke-width: 2px;
+  
+}
+
 
 
 
