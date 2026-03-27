@@ -1203,6 +1203,7 @@ fill:#ffffff;stroke:transparent;
   flex-direction: row;
   gap:12px;
   align-items: center;
+  margin-top:auto;
 }
 
 .taskBarContainer{
