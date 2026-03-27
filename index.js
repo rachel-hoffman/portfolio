@@ -168,3 +168,34 @@ document.addEventListener("auxclick", function (e) {
 
 // Console notice
 console.log("Content protected © Rachel Hoffman");
+
+
+// =====================
+// Clock Function
+// =====================
+
+function updateClock(){
+  const clock = document.getElementById("clock");
+
+  const now = new Date();
+
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let period = "AM";
+
+  if(hours>12){
+    period = "PM";
+    hours = hours > 12 ? hours - 12 : hours;
+  }
+
+  hours = hours === 0 ? 12 :hours;
+
+  //hours = hours<10 ? "0" + hours : hours;
+  minutes = minutes<10 ? "0" + minutes : minutes;
+
+  clock.textContent = `${hours}:${minutes}`;
+}
+
+updateClock();
+
+setInterval(updateClock, 1000);
