@@ -33,7 +33,7 @@
         <h2>Rachel's <br>Desktop</h2>
         <p class="subheading">A porfolio <em>coded</em> from scratch, <em>designed</em> for curiosity.</p>
         <div class="purpleBox" id="selectAnIcon">
-          <p>Select an icon to see what I've been building</p>
+          <p class="subheadingText">Select an icon to see what I've been building</p>
           <img src="images/arrow.png" class="arrowIcon">
         </div>
       </div>
@@ -99,15 +99,33 @@
         </div>
 
         <div class="taskBarContainer" id="iconsCenter">
-          <img src="images/taskBar/framerLogo.png" class="taskBarImg">
-          <img src="images/taskBar/figmaLogo.png" class="taskBarImg">
-          <img src="images/taskBar/gitHubLogo.jpg" class="taskBarImg">
-          <img src="images/taskBar/vsCodeLogo.jpg" class="taskBarImg">
-          <img src="images/taskBar/canvaLogo.png" class="taskBarImg">
+          <div class="iconPlaceholder">
+            <a href="doula.html"><img src="images/taskBar/framerLogo.png" class="taskBarImg"></a>
+            <span class="tooltip" id="taskBarTooltip">Framer</span>
+          </div>
+          <div class="iconPlaceholder">
+            <a href="calculator.html"><img src="images/taskBar/figmaLogo.png" class="taskBarImg"></a>
+            <span class="tooltip" id="taskBarTooltip">Figma</span>
+          </div>
+
+          <div class="iconPlaceholder">
+            <a href="portfolio.html"><img src="images/taskBar/gitHubLogo.jpg" class="taskBarImg"></a>
+            <span class="tooltip" id="taskBarTooltip">GitHub</span>
+          </div>
+
+          <div class="iconPlaceholder">
+            <a href="calculator.html"><img src="images/taskBar/vsCodeLogo.png" class="taskBarImg"></a>
+            <span class="tooltip" id="taskBarTooltip">VS Code</span>
+          </div>
+
+          <div class="iconPlaceholder">
+            <a href="captions.html"><img src="images/taskBar/canvaLogo.jpg" class="taskBarImg"></a>
+            <span class="tooltip" id="taskBarTooltip">Framer</span>
+          </div>
         </div>
 
         <div class="taskBarContainer" id="iconsRight">
-          <p>6:30 PM</p>
+          <p class="timeText">6:30 PM</p>
           <!--Add time, which should be accurate-->
         </div>
       </div>
@@ -143,7 +161,7 @@
   </div>
 
 
-  <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
 
