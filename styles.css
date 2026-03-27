@@ -24,8 +24,8 @@ body{
     font-family: 'Geist Mono', monospace; font-weight: 400;
 }
   h2{
-    font-size: 5rem;
-    padding-top:8vh;
+    font-size: 3rem;
+    padding-top:80px;
     font-family: 'Geist Mono', monospace; font-weight: 400;
   }
   p{
@@ -43,7 +43,7 @@ body{
   }
   .subheading{
     padding-top:20px;
-    font-size: 2rem;
+    font-size: 26px;
     margin-top:0px;
   }
   #selectAnIcon{
